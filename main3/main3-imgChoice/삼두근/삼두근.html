@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="삼두근.css">
+    <title>main2</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <header class="top-bar">
+                <button id="back-toggle">
+                    <i class="bi bi-chevron-left" onclick="next('/main2/main2')"></i>
+                </button>
+                <div class="title">
+                    <h1 class="logo bangers-regular" onclick="next('/main2/main2')">FitFlus</h1>
+                </div>
+            </header>
+            <div class="choice-container">
+                <div><p class="choice">삼두근</p></div>
+            </div>
+        </header>
+        <div class="sports-choice">
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/벤치프레스')"><img src="삼두근/벤치프레스.png" alt="">벤치프레스</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/클로즈그립벤치프레스')"><img src="삼두근/클로즈그립벤치프레스.png" alt="">클로즈 그립 벤치프레스</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/인클라인벤치프레스')"><img src="삼두근/인클라인벤치프레스.png" alt="">인클라인 벤치프레스</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/디클라인프레스')"><img src="삼두근/디클라인프레스.png" alt="">디클라인 프레스</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/스미스머신')"><img src="삼두근/스미스머신.png" alt="">스미스머신</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/시티드체스트프레스')"><img src="삼두근/시티드체스트프레스.png" alt="">시티드 체스트 프레스</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/체스트프레스머신')"><img src="삼두근/체스트프레스머신.png" alt="">체스트 프레스 머신</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/케이블크로스오버')"><img src="삼두근/케이블크로스오버.png" alt="">케이블 크로스오버</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/플라이머신')"><img src="삼두근/플라이머신.png" alt="">플라이머신</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/덤벨트라이셉스익스텐션')"><img src="삼두근/덤벨.png" alt="">덤벨 트라이셉스 익스텐션</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/원암트라이셉스익스텐션')"><img src="삼두근/덤벨.png" alt="">원암 트라이셉스 익스텐션</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/덤벨라잉트라이셉익스텐션')"><img src="삼두근/덤벨.png" alt="">덤벨 라잉 트라이셉 익스텐션</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/삼두근/덤벨트라이셉킥백')"><img src="삼두근/덤벨.png" alt="">덤벨 트라이셉 킥백</div>
+        </div>
+    </div>
+    <script>
+        function next(nextId) {
+            window.location.href = nextId + ".html";
+        }
+    </script>
+</body>
+
+</html>

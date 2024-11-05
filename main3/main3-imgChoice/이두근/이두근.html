@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="이두근.css">
+    <title>main2</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <header class="top-bar">
+                <button id="back-toggle">
+                    <i class="bi bi-chevron-left" onclick="next('/main2/main2')"></i>
+                </button>
+                <div class="title">
+                    <h1 class="logo bangers-regular" onclick="next('/main2/main2')">FitFlus</h1>
+                </div>
+            </header>
+            <div class="choice-container">
+                <div><p class="choice">이두근</p></div>
+            </div>
+        </header>
+        <div class="sports-choice">
+            <div class="sports" onclick="next('/main4/main4-imgChoice/이두근/덤벨바이셉컬')"><img src="이두근/덤벨.png" alt="">덤벨 바이셉 컬</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/이두근/덤벨해머컬')"><img src="이두근/덤벨.png" alt="">덤벨 해머 컬</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/이두근/스파이더바벨컬')"><img src="이두근/바벨.png" alt="">스파이더 바벨 컬</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/이두근/바벨드래그컬')"><img src="이두근/바벨.png" alt="">바벨 드래그 컬</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/이두근/머신바이셉컬')"><img src="이두근/머신바이셉컬.png" alt="">머신 바이셉 컬</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/이두근/렛풀다운')"><img src="이두근/렛풀다운.png" alt="">렛풀다운</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/이두근/케이블시티드로우')"><img src="이두근/케이블시티드로우.png" alt="">케이블 시티드로우</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/이두근/시티드로우')"><img src="이두근/시티드로우.png" alt="">시티드로우</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/이두근/어시스트풀업')"><img src="이두근/어시스트풀업.png" alt="">어시스트 풀업</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/이두근/티바로우')"><img src="이두근/티바로우.png" alt="">티바로우</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/이두근/플레이트래터럴풀다운')"><img src="이두근/플레이트래터럴풀다운.png" alt="">플레이트 래터럴 풀다운</div>
+        </div>
+    </div>
+    <script>
+        function next(nextId) {
+            window.location.href = nextId + ".html";
+        }
+    </script>
+</body>
+
+</html>

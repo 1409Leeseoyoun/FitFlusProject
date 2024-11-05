@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="main3-back.css">
+    <title>main2</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-bar">
+            <button id="back-toggle">
+                <i class="bi bi-chevron-left" onclick="next('/main2/main2')"></i>
+            </button>
+            <div class="title">
+                <h1 class="logo bangers-regular" onclick="next('/main2/main2')">FitFlus</h1>
+            </div>
+        </header>
+        <div class="choice-container">
+            <div class="choice-box" onclick="next('/main3/main3-chest/main3-chest')"><p class="choice chest">가슴</p></div>
+            <div class="choice-box"><p class="choice back">등</p></div>
+            <div class="choice-box" onclick="next('/main3/main3-shoulder/main3-shoulder')"><p class="choice shoulder">어깨</p></div>
+            <div class="choice-box" onclick="next('/main3/main3-arm/main3-arm')"><p class="choice arm">팔</p></div>
+            <div class="choice-box" onclick="next('/main3/main3-lowerbody/main3-lowerbody')"><p class="choice lower-body">하체</p></div>
+        </div>
+        <div class="sports-choice">
+            <div class="sports sports1" onclick="next('/main4/main4-back/렛풀다운')"><img src="렛풀다운.png" alt="">렛풀다운</div>
+            <div class="sports sports2" onclick="next('/main4/main4-back/케이블시티드로우')"><img src="케이블시티드로우.png" alt="">케이블 시티드로우</div>
+            <div class="sports sports3" onclick="next('/main4/main4-back/시티드로우')"><img src="시티드로우.png" alt="">시티드로우</div>
+            <div class="sports sports4" onclick="next('/main4/main4-back/어시스트풀업')"><img src="어시스트풀업.png" alt="">어시스트 풀업</div>
+            <div class="sports sports5" onclick="next('/main4/main4-back/티바로우')"><img src="티바로우.png" alt="">티바로우</div>
+            <div class="sports sports6" onclick="next('/main4/main4-back/플레이트래터럴풀다운')"><img src="플레이트래터럴풀다운.png" alt="">플레이트 래터럴 풀다운</div>
+            <div class="sports sports7" onclick="next('/main4/main4-back/백익스텐션')"><img src="백익스텐션.png" alt="">백 익스텐션</div>
+        </div>
+    </div>
+    <script>
+        function next(nextId) {
+            window.location.href = nextId + ".html";
+        }
+    </script>
+</body>
+
+</html>

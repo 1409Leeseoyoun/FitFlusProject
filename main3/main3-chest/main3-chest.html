@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="main3-chest.css">
+    <title>main2</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-bar">
+            <button id="back-toggle">
+                <i class="bi bi-chevron-left" onclick="next('/main2/main2')"></i>
+            </button>
+            <div class="title">
+                <h1 class="logo bangers-regular" onclick="next('/main2/main2')">FitFlus</h1>
+            </div>
+        </header>
+        <div class="choice-container">
+            <div class="choice-box"><p class="choice chest">가슴</p></div>
+            <div class="choice-box" onclick="next('/main3/main3-back/main3-back')"><p class="choice back">등</p></div>
+            <div class="choice-box" onclick="next('/main3/main3-shoulder/main3-shoulder')"><p class="choice shoulder">어깨</p></div>
+            <div class="choice-box" onclick="next('/main3/main3-arm/main3-arm')"><p class="choice arm">팔</p></div>
+            <div class="choice-box" onclick="next('/main3/main3-lowerbody/main3-lowerbody')"><p class="choice lower-body">하체</p></div>
+        </div>
+        <div class="sports-choice">
+            <div class="sports sports2" onclick="next('/main4/main4-chest/벤치프레스')"><img src="벤치프레스.png" alt="">벤치프레스</div>
+            <div class="sports sports8" onclick="next('/main4/main4-chest/클로즈그립벤치프레스')"><img src="클로즈그립벤치프레스.png" alt="">클로즈 그립 벤치프레스</div>
+            <div class="sports sports5" onclick="next('/main4/main4-chest/인클라인벤치프레스')"><img src="인클라인벤치프레스.png" alt="">인클라인 벤치프레스</div>
+            <div class="sports sports1" onclick="next('/main4/main4-chest/디클라인프레스')"><img src="디클라인프레스.png" alt="">디클라인 프레스</div>
+            <div class="sports sports3" onclick="next('/main4/main4-chest/스미스머신')"><img src="스미스머신.png" alt="">스미스머신</div>
+            <div class="sports sports4" onclick="next('/main4/main4-chest/시티드체스트프레스')"><img src="시티드체스트프레스.png" alt="">시티드 체스트 프레스</div>
+            <div class="sports sports6" onclick="next('/main4/main4-chest/체스트프레스머신')"><img src="체스트프레스머신.png" alt="">체스트 프레스 머신</div>
+            <div class="sports sports7" onclick="next('/main4/main4-chest/케이블크로스오버')"><img src="케이블크로스오버.png" alt="">케이블 크로스오버</div>
+            <div class="sports sports8" onclick="next('/main4/main4-chest/플라이머신')"><img src="플라이머신.png" alt="">플라이머신</div>
+        </div>
+    </div>
+    <script>
+        function next(nextId) {
+            window.location.href = nextId + ".html";
+        }
+    </script>
+</body>
+
+</html>

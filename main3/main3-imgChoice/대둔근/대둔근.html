@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="대둔근.css">
+    <title>main2</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <header class="top-bar">
+                <button id="back-toggle">
+                    <i class="bi bi-chevron-left" onclick="next('/main2/main2')"></i>
+                </button>
+                <div class="title">
+                    <h1 class="logo bangers-regular" onclick="next('/main2/main2')">FitFlus</h1>
+                </div>
+            </header>
+            <div class="choice-container">
+                <div><p class="choice">대둔근</p></div>
+            </div>
+        </header>
+        <div class="sports-choice">
+            <div class="sports" onclick="next('/main4/main4-imgChoice/대둔근/어덕션')"><img src="대둔근/어덕션.png" alt="">어덕션</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/대둔근/이너아웃사이')"><img src="대둔근/이너아웃사이.png" alt="">이너아웃사이</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/대둔근/레그프레스')"><img src="대둔근/레그프레스.png" alt="">레그프레스</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/대둔근/파워레그프레스')"><img src="대둔근/파워레그프레스.png" alt="">파워 레그프레스</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/대둔근/힙쓰러스트')"><img src="대둔근/힙쓰러스트.png" alt="">힙쓰러스트</div>
+            <div class="sports" onclick="next('/main4/main4-imgChoice/대둔근/시티드레그컬')"><img src="대둔근/시티드레그컬.png" alt="">시티드레그컬</div>
+        </div>
+    </div>
+    <script>
+        function next(nextId) {
+            window.location.href = nextId + ".html";
+        }
+    </script>
+</body>
+
+</html>

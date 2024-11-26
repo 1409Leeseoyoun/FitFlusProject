@@ -44,6 +44,7 @@ header.top-bar {
 .map i {
     font-size: 24px;
 }
+
 .map:hover {
     transition: color 0.2s ease;
     color: rgb(24, 255, 24);
@@ -58,6 +59,7 @@ input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
     -webkit-text-fill-color: #fff !important;
 }
+
 .search-bar {
     display: flex;
     align-items: center;
@@ -171,6 +173,7 @@ input:-webkit-autofill:active {
 .choice-container2 {
     display: none;
 }
+
 .choice-container3 {
     display: none;
 }
@@ -190,7 +193,8 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* 클릭을 이미지로 전달 */
+    pointer-events: none;
+    /* 클릭을 이미지로 전달 */
     z-index: 1;
 }
 
@@ -202,9 +206,11 @@ img {
     .search-bar {
         display: none;
     }
+
     .map i {
         font-size: 22px;
     }
+
     .search-bar2 {
         display: flex;
         margin-top: 0;
@@ -291,6 +297,7 @@ img {
         cursor: pointer;
         transition: background-color 0.2s;
     }
+
     .choice2:hover {
         background-color: #2b2b2b;
     }
@@ -305,41 +312,44 @@ img {
 }
 
 @media (max-width: 835px) {
-    .body img {
-        width: 400px;
-    }
     #choice-toggle {
         height: 100px;
     }
+
     .choice2 {
         padding: 15px 45px;
         font-size: 14px;
     }
 }
+
 @media (max-width: 435px) {
     header.top-bar {
         padding: 10px 15px;
         height: 70px;
     }
-    
+
     .bangers-regular {
         font-weight: 400;
         font-size: 35px;
         margin: 5px 0 0 0;
     }
-    
+
     .body-container {
         display: none;
     }
+
     .choice-container2 {
         display: none;
     }
+
     .map-click {
         display: none;
     }
+
     .map i {
         font-size: 22px;
     }
+
     .search-bar2 {
         height: 38px;
         padding-top: 3px;
@@ -353,6 +363,7 @@ img {
         font-size: 17px;
         margin-right: 10px;
     }
+
     .choice-container3 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -360,6 +371,7 @@ img {
         gap: 15px;
         margin-top: 70px;
     }
+
     .choice3 {
         background-color: #000000;
         color: white;
@@ -373,10 +385,12 @@ img {
         font-size: 15px;
         font-weight: 600;
     }
+
     .choice3:hover {
         background-color: #2b2b2b;
     }
 }
+
 @media (max-width: 390px) {
     .choice-container3 {
         display: grid;
@@ -385,6 +399,7 @@ img {
         gap: 15px;
         margin-top: 60px;
     }
+
     .choice3 {
         background-color: #000000;
         color: white;

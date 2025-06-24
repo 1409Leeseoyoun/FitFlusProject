@@ -1,150 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="스미스머신.css" />
+    <title>FitFlus</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="스미스머신.css">
-    <title>Document</title>
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <header class="top-bar">
-            <button id="back-toggle">
-                <i class="bi bi-chevron-left" onclick="next('/main3/main3-imgChoice/삼두근/삼두근')"></i>
-            </button>
-            <div class="title">
-                <h1 class="logo bangers-regular" onclick="next('/main2/main2')">FitFlus</h1>
-            </div>
-        </header>
-        <div class="choice-container">
-            <p>스미스머신</p>
+      <header class="top-bar">
+        <button id="back-toggle">
+          <i
+            class="bi bi-chevron-left"
+            onclick="next('/main3/main3-imgChoice/삼두근/삼두근')"
+          ></i>
+        </button>
+        <div class="title">
+          <h1 class="logo bangers-regular" onclick="next('/main2/main2')">
+            FitFlus
+          </h1>
         </div>
-        <div class="content">
-            <div class="스미스머신-content">
-                <div class="fixation">
-                    <img src="스미스머신/스미스머신.png">
-                    <h2>스미스머신</h2>
-                </div>
-            </div>
-            <div class="scroll-section">
-                <div class="스미스머신1">
-                    <div class="스미스머신1-content">
-                        <div class="set">
-                            <img src="스미스머신/스미스머신1.png">
-                        </div>
-                        <div class="ol-content">
-                            <ol>
-                                <li>인클라인 벤치를 약 30도에서 45도 정도로 기울여 스미스머신 아래에 배치한다.</li>
-                                <li>바를 가슴 윗부분 위에 위치시키고, 손을 어깨 너비보다 약간 넓게 벌려서 잡는다.</li>
-                                <li>바를 가슴 위쪽으로 내리기 전에, 손목을 비틀어 잠금 장치를 풀어 바를 자유롭게 움직일 수 있도록 한다.</li>
-                                <li>바를 밀어 팔을 핀다.</li>
-                                <li>이때 호흡은 뱉는다.</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="스미스머신2">
-                    <div class="스미스머신2-content">
-                        <div class="ol-content">
-                            <ol>
-                                <li>천천히 바를 가슴 윗부분으로 내린다. 팔꿈치를 몸통 옆으로 자연스럽게 내리며, 바가 가슴 상부에 닿도록 한다.</li>
-                                <li>바가 가슴에 살짝 닿으면, 숨을 내쉬면서 팔을 밀어 올려 시작 위치로 돌아온다.</li>
-                                <li>이때 호흡은 마신다.</li>
-                            </ol>
-                        </div>
-                        <div class="set">
-                            <img src="스미스머신/스미스머신2.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="other-content">
-                    <div class="주의사항">
-                        <h3>주의사항</h3>
-                        <ul class="ul-content">
-                            <li>스미스머신이 안정된 궤도를 제공하지만, 어깨와 손목의 위치를 잘 조절하여 부상을 방지해야 한다. 손목이 꺾이지 않도록 바를 손바닥 중심에 위치시킨다.</li>
-                            <li>지나치게 무거운 중량은 잘못된 자세를 유발할 수 있어 부상의 원인이 된다.</li>
-                        </ul>
-                    </div>
-                    <div class="부가설명">
-                        <h3>운동부위 및 효과</h3>
-                        <ul class="ul-content">
-                            <li>상부 대흉근, 삼두근, 삼각근 전면부, 코어근육</li>
-                            <li>인클라인 각도 덕분에 가슴 상부 근육에 더 많은 자극을 주어, 가슴 윗부분을 두껍고 탄탄하게 만든다.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      </header>
+      <div class="choice-container">
+        <p>스미스머신</p>
+      </div>
+      <div class="content">
+        <div class="스미스머신-content">
+          <div class="fixation">
+            <img src="스미스머신/스미스머신.png" />
+            <h2>스미스머신</h2>
+          </div>
         </div>
-        <div class="content2">
-            <div class="flex-content">
-                <div class="img-content">
-                    <img src="스미스머신/스미스머신.png" class="img">
-                </div>
-                <div class="스미스머신1-2">
-                    <div class="set1">
-                        <img src="스미스머신/스미스머신1.png">
-                    </div>
-                    <div class="ol-content1">
-                        <ol>
-                            <li>인클라인 벤치를 약 30도에서 45도 정도로 기울여 스미스머신 아래에 배치한다.</li>
-                            <li>바를 가슴 윗부분 위에 위치시키고, 손을 어깨 너비보다 약간 넓게 벌려서 잡는다.</li>
-                            <li>바를 가슴 위쪽으로 내리기 전에, 손목을 비틀어 잠금 장치를 풀어 바를 자유롭게 움직일 수 있도록 한다.</li>
-                            <li>바를 밀어 팔을 핀다.</li>
-                            <li>이때 호흡은 뱉는다.</li>
-                        </ol>
-                    </div>
-                </div>
+        <div class="scroll-section">
+          <div class="스미스머신1">
+            <div class="스미스머신1-content">
+              <div class="set">
+                <img src="스미스머신/스미스머신1.png" />
+              </div>
+              <div class="ol-content">
+                <ol>
+                  <li>
+                    인클라인 벤치를 약 30도에서 45도 정도로 기울여 스미스머신
+                    아래에 배치한다.
+                  </li>
+                  <li>
+                    바를 가슴 윗부분 위에 위치시키고, 손을 어깨 너비보다 약간
+                    넓게 벌려서 잡는다.
+                  </li>
+                  <li>
+                    바를 가슴 위쪽으로 내리기 전에, 손목을 비틀어 잠금 장치를
+                    풀어 바를 자유롭게 움직일 수 있도록 한다.
+                  </li>
+                  <li>바를 밀어 팔을 핀다.</li>
+                  <li>이때 호흡은 뱉는다.</li>
+                </ol>
+              </div>
             </div>
-            <div class="스미스머신2-2">
-                <div class="ol-content2">
-                    <ol>
-                        <li>천천히 바를 가슴 윗부분으로 내린다. 팔꿈치를 몸통 옆으로 자연스럽게 내리며, 바가 가슴 상부에 닿도록 한다.</li>
-                        <li>바가 가슴에 살짝 닿으면, 숨을 내쉬면서 팔을 밀어 올려 시작 위치로 돌아온다.</li>
-                        <li>이때 호흡은 마신다.</li>
-                    </ol>
-                </div>
-                <div class="set2">
-                    <img src="스미스머신/스미스머신2.png">
-                </div>
+          </div>
+          <div class="스미스머신2">
+            <div class="스미스머신2-content">
+              <div class="ol-content">
+                <ol>
+                  <li>
+                    천천히 바를 가슴 윗부분으로 내린다. 팔꿈치를 몸통 옆으로
+                    자연스럽게 내리며, 바가 가슴 상부에 닿도록 한다.
+                  </li>
+                  <li>
+                    바가 가슴에 살짝 닿으면, 숨을 내쉬면서 팔을 밀어 올려 시작
+                    위치로 돌아온다.
+                  </li>
+                  <li>이때 호흡은 마신다.</li>
+                </ol>
+              </div>
+              <div class="set">
+                <img src="스미스머신/스미스머신2.png" />
+              </div>
             </div>
-            <div class="스미스머신2-3">
-                <div class="set2">
-                    <img src="스미스머신/스미스머신2.png">
-                </div>
-                <div class="ol-content3">
-                    <ol>
-                        <li>천천히 바를 가슴 윗부분으로 내린다. 팔꿈치를 몸통 옆으로 자연스럽게 내리며, 바가 가슴 상부에 닿도록 한다.</li>
-                        <li>바가 가슴에 살짝 닿으면, 숨을 내쉬면서 팔을 밀어 올려 시작 위치로 돌아온다.</li>
-                        <li>이때 호흡은 마신다.</li>
-                    </ol>
-                </div>
+          </div>
+          <div class="other-content">
+            <div class="주의사항">
+              <h3>주의사항</h3>
+              <ul class="ul-content">
+                <li>
+                  스미스머신이 안정된 궤도를 제공하지만, 어깨와 손목의 위치를 잘
+                  조절하여 부상을 방지해야 한다. 손목이 꺾이지 않도록 바를
+                  손바닥 중심에 위치시킨다.
+                </li>
+                <li>
+                  지나치게 무거운 중량은 잘못된 자세를 유발할 수 있어 부상의
+                  원인이 된다.
+                </li>
+              </ul>
             </div>
-            <div class="other-content">
-                <div class="주의사항">
-                    <h3>주의사항</h3>
-                    <ul class="ul-content">
-                        <li>스미스머신이 안정된 궤도를 제공하지만, 어깨와 손목의 위치를 잘 조절하여 부상을 방지해야 한다. 손목이 꺾이지 않도록 바를 손바닥 중심에 위치시킨다.</li>
-                        <li>지나치게 무거운 중량은 잘못된 자세를 유발할 수 있어 부상의 원인이 된다.</li>
-                    </ul>
-                </div>
-                <div class="부가설명">
-                    <h3>운동부위 및 효과</h3>
-                    <ul class="ul-content">
-                        <li>상부 대흉근, 삼두근, 삼각근 전면부, 코어근육</li>
-                        <li>인클라인 각도 덕분에 가슴 상부 근육에 더 많은 자극을 주어, 가슴 윗부분을 두껍고 탄탄하게 만든다.</li>
-                    </ul>
-                </div>
+            <div class="부가설명">
+              <h3>운동부위 및 효과</h3>
+              <ul class="ul-content">
+                <li>상부 대흉근, 삼두근, 삼각근 전면부, 코어근육</li>
+                <li>
+                  인클라인 각도 덕분에 가슴 상부 근육에 더 많은 자극을 주어,
+                  가슴 윗부분을 두껍고 탄탄하게 만든다.
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="content2">
+        <div class="flex-content">
+          <div class="img-content">
+            <img src="스미스머신/스미스머신.png" class="img" />
+          </div>
+          <div class="스미스머신1-2">
+            <div class="set1">
+              <img src="스미스머신/스미스머신1.png" />
+            </div>
+            <div class="ol-content1">
+              <ol>
+                <li>
+                  인클라인 벤치를 약 30도에서 45도 정도로 기울여 스미스머신
+                  아래에 배치한다.
+                </li>
+                <li>
+                  바를 가슴 윗부분 위에 위치시키고, 손을 어깨 너비보다 약간 넓게
+                  벌려서 잡는다.
+                </li>
+                <li>
+                  바를 가슴 위쪽으로 내리기 전에, 손목을 비틀어 잠금 장치를 풀어
+                  바를 자유롭게 움직일 수 있도록 한다.
+                </li>
+                <li>바를 밀어 팔을 핀다.</li>
+                <li>이때 호흡은 뱉는다.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="스미스머신2-2">
+          <div class="ol-content2">
+            <ol>
+              <li>
+                천천히 바를 가슴 윗부분으로 내린다. 팔꿈치를 몸통 옆으로
+                자연스럽게 내리며, 바가 가슴 상부에 닿도록 한다.
+              </li>
+              <li>
+                바가 가슴에 살짝 닿으면, 숨을 내쉬면서 팔을 밀어 올려 시작
+                위치로 돌아온다.
+              </li>
+              <li>이때 호흡은 마신다.</li>
+            </ol>
+          </div>
+          <div class="set2">
+            <img src="스미스머신/스미스머신2.png" />
+          </div>
+        </div>
+        <div class="스미스머신2-3">
+          <div class="set2">
+            <img src="스미스머신/스미스머신2.png" />
+          </div>
+          <div class="ol-content3">
+            <ol>
+              <li>
+                천천히 바를 가슴 윗부분으로 내린다. 팔꿈치를 몸통 옆으로
+                자연스럽게 내리며, 바가 가슴 상부에 닿도록 한다.
+              </li>
+              <li>
+                바가 가슴에 살짝 닿으면, 숨을 내쉬면서 팔을 밀어 올려 시작
+                위치로 돌아온다.
+              </li>
+              <li>이때 호흡은 마신다.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="other-content">
+          <div class="주의사항">
+            <h3>주의사항</h3>
+            <ul class="ul-content">
+              <li>
+                스미스머신이 안정된 궤도를 제공하지만, 어깨와 손목의 위치를 잘
+                조절하여 부상을 방지해야 한다. 손목이 꺾이지 않도록 바를 손바닥
+                중심에 위치시킨다.
+              </li>
+              <li>
+                지나치게 무거운 중량은 잘못된 자세를 유발할 수 있어 부상의
+                원인이 된다.
+              </li>
+            </ul>
+          </div>
+          <div class="부가설명">
+            <h3>운동부위 및 효과</h3>
+            <ul class="ul-content">
+              <li>상부 대흉근, 삼두근, 삼각근 전면부, 코어근육</li>
+              <li>
+                인클라인 각도 덕분에 가슴 상부 근육에 더 많은 자극을 주어, 가슴
+                윗부분을 두껍고 탄탄하게 만든다.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
-        function next(nextId) {
-            window.location.href = nextId + ".html";
-        }
+      function next(nextId) {
+        window.location.href = nextId + ".html";
+      }
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,46 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="승모근.css" />
+    <title>FitFlus</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="승모근.css">
-    <title>main2</title>
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <header class="header">
-            <header class="top-bar">
-                <button id="back-toggle">
-                    <i class="bi bi-chevron-left" onclick="next('/main2/main2')"></i>
-                </button>
-                <div class="title">
-                    <h1 class="logo bangers-regular" onclick="next('/main2/main2')">FitFlus</h1>
-                </div>
-            </header>
-            <div class="choice-container">
-                <div><p class="choice">승모근</p></div>
-            </div>
+      <header class="header">
+        <header class="top-bar">
+          <button id="back-toggle">
+            <i class="bi bi-chevron-left" onclick="next('/main2/main2')"></i>
+          </button>
+          <div class="title">
+            <h1 class="logo bangers-regular" onclick="next('/main2/main2')">
+              FitFlus
+            </h1>
+          </div>
         </header>
-        <div class="sports-choice">
-            <div class="sports" onclick="next('/main4/main4-imgChoice/승모근/렛풀다운')"><img src="승모근/렛풀다운.png" alt="">렛풀다운</div>
-            <div class="sports" onclick="next('/main4/main4-imgChoice/승모근/시티드로우')"><img src="승모근/시티드로우.png" alt="">시티드로우</div>
-            <div class="sports" onclick="next('/main4/main4-imgChoice/승모근/어시스트풀업')"><img src="승모근/어시스트풀업.png" alt="">어시스트풀업</div>
-            <div class="sports" onclick="next('/main4/main4-imgChoice/승모근/케이블시티드로우')"><img src="승모근/케이블시티드로우.png" alt="">케이블시티드로우</div>
-            <div class="sports" onclick="next('/main4/main4-imgChoice/승모근/티바로우')"><img src="승모근/티바로우.png" alt="">티 바 로우</div>
-            <div class="sports" onclick="next('/main4/main4-imgChoice/승모근/플레이트래터럴풀다운')"><img src="승모근/플레이트래터럴풀다운.png" alt="">플레이트래터럴풀다운</div>
-            <div class="sports" onclick="next('/main4/main4-imgChoice/승모근/리버스플라이')"><img src="승모근/리버스플라이.png" alt="">리버스플라이</div>
-            <div class="sports" onclick="next('/main4/main4-imgChoice/승모근/사이드레터럴레이즈')"><img src="승모근/사이드레터럴레이즈.png" alt="">사이드레터럴레이즈</div>
-            <div class="sports" onclick="next('/main4/main4-imgChoice/승모근/숄더프레스')"><img src="승모근/숄더프레스.png" alt="">숄더프레스</div>
+        <div class="choice-container">
+          <div><p class="choice">승모근</p></div>
         </div>
+      </header>
+      <div class="sports-choice">
+        <div
+          class="sports"
+          onclick="next('/main4/main4-imgChoice/승모근/렛풀다운')"
+        >
+          <img src="승모근/렛풀다운.png" alt="" />렛풀다운
+        </div>
+        <div
+          class="sports"
+          onclick="next('/main4/main4-imgChoice/승모근/시티드로우')"
+        >
+          <img src="승모근/시티드로우.png" alt="" />시티드로우
+        </div>
+        <div
+          class="sports"
+          onclick="next('/main4/main4-imgChoice/승모근/어시스트풀업')"
+        >
+          <img src="승모근/어시스트풀업.png" alt="" />어시스트풀업
+        </div>
+        <div
+          class="sports"
+          onclick="next('/main4/main4-imgChoice/승모근/케이블시티드로우')"
+        >
+          <img src="승모근/케이블시티드로우.png" alt="" />케이블시티드로우
+        </div>
+        <div
+          class="sports"
+          onclick="next('/main4/main4-imgChoice/승모근/티바로우')"
+        >
+          <img src="승모근/티바로우.png" alt="" />티 바 로우
+        </div>
+        <div
+          class="sports"
+          onclick="next('/main4/main4-imgChoice/승모근/플레이트래터럴풀다운')"
+        >
+          <img
+            src="승모근/플레이트래터럴풀다운.png"
+            alt=""
+          />플레이트래터럴풀다운
+        </div>
+        <div
+          class="sports"
+          onclick="next('/main4/main4-imgChoice/승모근/리버스플라이')"
+        >
+          <img src="승모근/리버스플라이.png" alt="" />리버스플라이
+        </div>
+        <div
+          class="sports"
+          onclick="next('/main4/main4-imgChoice/승모근/사이드레터럴레이즈')"
+        >
+          <img src="승모근/사이드레터럴레이즈.png" alt="" />사이드레터럴레이즈
+        </div>
+        <div
+          class="sports"
+          onclick="next('/main4/main4-imgChoice/승모근/숄더프레스')"
+        >
+          <img src="승모근/숄더프레스.png" alt="" />숄더프레스
+        </div>
+      </div>
     </div>
     <script>
-        function next(nextId) {
-            window.location.href = nextId + ".html";
-        }
+      function next(nextId) {
+        window.location.href = nextId + ".html";
+      }
     </script>
-</body>
-
+  </body>
 </html>

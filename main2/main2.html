@@ -1,224 +1,543 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=JPQQ5Gy39roOup3GWL9a"></script>
-    <link rel="stylesheet" href="main2.css">
-    <title>main2</title>
-</head>
+    <link rel="stylesheet" href="main2.css" />
+    <title>FitFlus</title>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <header class="top-bar">
-            <div class="title">
-                <h1 class="logo bangers-regular">FitFlus</h1>
-            </div>
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="운동기구 검색" autocomplete="off" />
-                <button id="search-button" onclick="search()">
-                    <i class="bi bi-search"></i>
-                </button>
-            </div>
-            <div class="map">
-                <p class="map-click">내 주변 헬스장 알아보기</p>
-                <i class="bi bi-geo-alt-fill"></i>
-            </div>
-        </header>
-        <div class="choice-container">
-            <div class="choice-box" onclick="next('/main3/main3-chest/main3-chest')">
-                <p class="choice chest">가슴</p>
-            </div>
-            <div class="choice-box" onclick="next('/main3/main3-back/main3-back')">
-                <p class="choice back">등</p>
-            </div>
-            <div class="choice-box" onclick="next('/main3/main3-shoulder/main3-shoulder')">
-                <p class="choice shoulder">어깨</p>
-            </div>
-            <div class="choice-box" onclick="next('/main3/main3-arm/main3-arm')">
-                <p class="choice arm">팔</p>
-            </div>
-            <div class="choice-box" onclick="next('/main3/main3-lowerbody/main3-lowerbody')">
-                <p class="choice lower-body">하체</p>
-            </div>
+      <header class="top-bar">
+        <div class="title">
+          <h1 class="logo bangers-regular">FitFlus</h1>
         </div>
-        <div class="search-bar2">
-            <input type="text" id="search-input2" placeholder="운동기구 검색" autocomplete="off" />
-            <button id="search-button2" onclick="search()">
-                <i class="bi bi-search"></i>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="운동기구 검색"
+            autocomplete="off"
+          />
+          <button id="search-button" onclick="search()">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+        <div class="map">
+          <p class="map-click">내 주변 헬스장 알아보기</p>
+          <i class="bi bi-geo-alt-fill"></i>
+        </div>
+      </header>
+      <div class="choice-container">
+        <div
+          class="choice-box"
+          onclick="next('/main3/main3-chest/main3-chest')"
+        >
+          <p class="choice chest">가슴</p>
+        </div>
+        <div class="choice-box" onclick="next('/main3/main3-back/main3-back')">
+          <p class="choice back">등</p>
+        </div>
+        <div
+          class="choice-box"
+          onclick="next('/main3/main3-shoulder/main3-shoulder')"
+        >
+          <p class="choice shoulder">어깨</p>
+        </div>
+        <div class="choice-box" onclick="next('/main3/main3-arm/main3-arm')">
+          <p class="choice arm">팔</p>
+        </div>
+        <div
+          class="choice-box"
+          onclick="next('/main3/main3-lowerbody/main3-lowerbody')"
+        >
+          <p class="choice lower-body">하체</p>
+        </div>
+      </div>
+      <div class="search-bar2">
+        <input
+          type="text"
+          id="search-input2"
+          placeholder="운동기구 검색"
+          autocomplete="off"
+        />
+        <button id="search-button2" onclick="search()">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+      <div class="main-container">
+        <div class="choice-container2">
+          <button id="choice-toggle">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+          <div id="choices" class="choice-list">
+            <button
+              class="choice2 chest2"
+              onclick="next('/main3/main3-chest/main3-chest')"
+            >
+              가슴
             </button>
+            <button
+              class="choice2 back2"
+              onclick="next('/main3/main3-back/main3-back')"
+            >
+              등
+            </button>
+            <button
+              class="choice2 shoulder2"
+              onclick="next('/main3/main3-shoulder/main3-shoulder')"
+            >
+              어깨
+            </button>
+            <button
+              class="choice2 arm2"
+              onclick="next('/main3/main3-arm/main3-arm')"
+            >
+              팔
+            </button>
+            <button
+              class="choice2 lower-body2"
+              onclick="next('/main3/main3-lowerbody/main3-lowerbody')"
+            >
+              하체
+            </button>
+          </div>
         </div>
-        <div class="main-container">
-            <div class="choice-container2">
-                <button id="choice-toggle">
-                    <i class="bi bi-chevron-right"></i>
-                </button>
-                <div id="choices" class="choice-list">
-                    <button class="choice2 chest2" onclick="next('/main3/main3-chest/main3-chest')">가슴</button>
-                    <button class="choice2 back2" onclick="next('/main3/main3-back/main3-back')">등</button>
-                    <button class="choice2 shoulder2" onclick="next('/main3/main3-shoulder/main3-shoulder')">어깨</button>
-                    <button class="choice2 arm2" onclick="next('/main3/main3-arm/main3-arm')">팔</button>
-                    <button class="choice2 lower-body2"
-                        onclick="next('/main3/main3-lowerbody/main3-lowerbody')">하체</button>
-                </div>
-            </div>
-            <div class="choice-container3">
-                <button class="choice3 chest3" onclick="next('/main3/main3-chest/main3-chest')">가슴</button>
-                <button class="choice3 back3" onclick="next('/main3/main3-back/main3-back')">등</button>
-                <button class="choice3 shoulder3" onclick="next('/main3/main3-shoulder/main3-shoulder')">어깨</button>
-                <button class="choice3 arm3" onclick="next('/main3/main3-arm/main3-arm')">팔</button>
-                <button class="choice3 lower-body3" onclick="next('/main3/main3-lowerbody/main3-lowerbody')">하체</button>
-            </div>
-            <div class="body-container">
-                <div class="body">
-                    <div class="image-map-container">
-                        <img src="인체.png" usemap="#image-map" id="main-image">
-                        <svg class="svg-overlay"></svg>
-                    </div>
-                    <map name="image-map">
-                        <area target="" alt="대흉근" title="대흉근" href="/main3/main3-imgChoice/대흉근/대흉근.html"
-                            coords="144,100,153,98,164,99,172,102,177,104,180,109,180,117,173,134,168,139,161,143,148,142,141,139,140,131,139,117,141,108"
-                            shape="poly">
-                        <area target="" alt="대흉근" title="대흉근" href="/main3/main3-imgChoice/대흉근/대흉근.html"
-                            coords="127,99,114,99,103,101,97,104,95,108,93,116,95,122,99,132,104,138,110,141,113,142,122,142,126,142,131,140,133,133,134,122,133,109,130,102"
-                            shape="poly">
-                        <area target="" alt="복근" title="복근" href=""
-                            coords="118,147,125,145,132,144,142,144,149,146,155,147,156,151,157,157,157,166,157,174,156,180,157,187,157,191,155,196,153,198,140,198,132,198,124,198,117,196,115,191,116,184,116,177,116,172,116,165,115,161,116,152"
-                            shape="poly">
-                        <area target="" alt="대둔근" title="대둔근" href="/main3/main3-imgChoice/대둔근/대둔근.html"
-                            coords="347,219,344,221,347,219,335,226,327,231,324,237,324,245,324,255,326,261,330,267,337,273,345,274,352,273,359,269,362,264,362,250,361,239,360,231,355,224"
-                            shape="poly">
-                        <area target="" alt="대둔근" title="대둔근" href="/main3/main3-imgChoice/대둔근/대둔근.html"
-                            coords="381,219,373,224,368,233,367,241,367,249,367,260,368,268,373,271,378,273,385,274,390,274,396,270,401,265,403,261,405,252,405,243,404,236,399,230,391,225,385,222"
-                            shape="poly">
-                        <area target="" alt="삼각근" title="삼각근" href="/main3/main3-imgChoice/삼각근/삼각근.html"
-                            coords="98,90,88,93,83,96,78,101,75,107,75,115,77,122,80,127,86,121,90,116,91,107,95,102,101,99,110,97,104,94"
-                            shape="poly">
-                        <area target="" alt="삼각근" title="삼각근" href="/main3/main3-imgChoice/삼각근/삼각근.html"
-                            coords="162,97,167,95,173,92,174,91,181,92,188,95,191,98,196,103,198,106,198,113,197,118,193,128,186,121,183,116,182,111,181,106,177,102,172,99"
-                            shape="poly">
-                        <area target="" alt="삼각근" title="삼각근" href="/main3/main3-imgChoice/삼각근/삼각근.html"
-                            coords="313,93,319,95,326,98,320,101,316,105,313,110,312,116,308,120,304,125,297,132,296,122,296,114,299,105,303,98,307,95,309,94"
-                            shape="poly">
-                        <area target="" alt="삼각근" title="삼각근" href="/main3/main3-imgChoice/삼각근/삼각근.html"
-                            coords="415,92,408,96,404,98,409,101,414,106,416,110,418,116,421,121,425,125,431,132,432,124,433,117,432,110,428,102,423,96,420,94"
-                            shape="poly">
-                        <area target="" alt="승모근" title="승모근" href="/main3/main3-imgChoice/승모근/승모근.html"
-                            coords="151,77,144,96,156,96,171,90,159,85" shape="poly">
-                        <area target="" alt="승모근" title="승모근" href="/main3/main3-imgChoice/승모근/승모근.html"
-                            coords="121,76,130,96,118,96,103,90,114,85" shape="poly">
-                        <area target="" alt="복사근" title="복사근" href=""
-                            coords="173,187,174,196,174,206,176,214,169,219,162,226,161,215,160,206,165,198"
-                            shape="poly">
-                        <area target="" alt="복사근" title="복사근" href=""
-                            coords="98,187,103,193,109,198,113,209,111,217,111,228,103,217,96,214,98,206" shape="poly">
-                        <area target="" alt="광배근" title="광배근" href="/main3/main3-imgChoice/광배근/광배근.html"
-                            coords="343,131,346,138,350,144,356,157,354,165,350,173,345,182,343,191,343,200,339,204,335,198,331,192,330,182,326,174,324,163,319,145,318,135,331,136"
-                            shape="poly">
-                        <area target="" alt="광배근" title="광배근" href="/main3/main3-imgChoice/광배근/광배근.html"
-                            coords="386,131,382,138,378,145,375,151,373,158,373,164,377,170,381,178,385,190,385,202,390,203,397,190,400,177,402,172,407,155,410,144,410,135,397,136"
-                            shape="poly">
-                        <area target="" alt="복사근" title="복사근" href=""
-                            coords="328,185,330,194,336,205,334,209,324,214,324,200" shape="poly">
-                        <area target="" alt="복사근" title="복사근" href=""
-                            coords="401,185,397,193,392,207,395,210,405,213,404,199" shape="poly">
-                        <area target="" alt="둔근" title="둔근" href="/main3/main3-imgChoice/둔근/둔근.html" coords="384,217,399,216,401,221,403,230,388,221"
-                            shape="poly">
-                        <area target="" alt="둔근" title="둔근" href="/main3/main3-imgChoice/둔근/둔근.html"
-                            coords="330,216,325,230,333,224,341,220,345,217,337,216" shape="poly">
-                        <area target="" alt="삼두근" title="삼두근" href="/main3/main3-imgChoice/삼두근/삼두근.html"
-                            coords="416,121,413,129,412,144,415,161,421,175,426,177,433,167,433,152,431,136,424,128"
-                            shape="poly">
-                        <area target="" alt="삼두근" title="삼두근" href="/main3/main3-imgChoice/삼두근/삼두근.html"
-                            coords="312,121,299,135,297,145,295,163,296,169,304,178,308,174,314,160,317,145,315,128"
-                            shape="poly">
-                        <area target="" alt="이두근" title="이두근" href="/main3/main3-imgChoice/이두근/이두근.html"
-                            coords="90,120,81,130,70,140,68,151,67,164,69,176,74,175,81,165,90,147,91,134" shape="poly">
-                        <area target="" alt="이두근" title="이두근" href="/main3/main3-imgChoice/이두근/이두근.html"
-                            coords="182,120,181,132,183,148,188,158,200,177,204,174,206,164,205,152,202,139"
-                            shape="poly">
-                        <area target="" alt="진거근" title="진거근" href=""
-                            coords="161,145,174,138,173,147,171,154,172,165,173,170,172,185,164,196,161,193,161,179,162,163"
-                            shape="poly">
-                        <area target="" alt="진거근" title="진거근" href=""
-                            coords="98,139,110,145,111,152,112,159,111,169,112,183,109,195,99,186,100,174,100,163,103,156,100,149"
-                            shape="poly">
-                        <area target="" alt="햄스트링" title="햄스트링" href="/main3/main3-imgChoice/햄스트링/햄스트링.html"
-                            coords="343,278,336,277,331,280,328,285,327,290,326,300,326,313,326,323,326,331,325,338,323,344,322,361,330,348,334,338,336,337,336,344,338,352,343,363,341,346,344,333,348,319,350,308,350,296,347,286"
-                            shape="poly">
-                        <area target="" alt="햄스트링" title="햄스트링" href="/main3/main3-imgChoice/햄스트링/햄스트링.html"
-                            coords="386,278,392,277,397,279,401,284,402,290,403,298,403,308,403,316,403,331,406,348,407,362,394,337,393,336,393,344,392,351,386,365,388,349,386,338,381,317,379,305,379,294"
-                            shape="poly">
-                        <area target="" alt="박근" title="박근" href="/main3/main3-imgChoice/박근/박근.html"
-                            coords="345,276,352,276,359,273,361,279,359,289,357,308,354,315,351,293" shape="poly">
-                        <area target="" alt="박근" title="박근" href="/main3/main3-imgChoice/박근/박근.html"
-                            coords="368,274,376,276,382,277,382,283,377,292,374,316,371,302,368,284,368,279"
-                            shape="poly">
-                        <area target="" alt="박근" title="박근" href="/main3/main3-imgChoice/박근/박근.html"
-                            coords="126,261,132,266,134,284,131,292,128,312,127,298,129,285,128,271" shape="poly">
-                        <area target="" alt="박근" title="박근" href="/main3/main3-imgChoice/박근/박근.html"
-                            coords="145,263,140,268,139,286,141,293,145,312,146,300,143,288" shape="poly">
-                        <area target="" alt="장요근, 치골근, 장내전근" title="장요근, 치골근, 장내전근" href=""
-                            coords="167,228,152,245,153,253,158,261,162,251,166,236" shape="poly">
-                        <area target="" alt="장요근, 치골근, 장내전근" title="장요근, 치골근, 장내전근" href=""
-                            coords="104,226,115,262,119,253,120,245" shape="poly">
-                        <area target="" alt="봉공근" title="봉공근" href=""
-                            coords="99,222,102,226,120,281,124,302,126,317,125,327,119,297,110,269" shape="poly">
-                        <area target="" alt="봉공근" title="봉공근" href=""
-                            coords="173,223,169,227,170,227,154,279,148,301,147,328,152,301,159,281,166,257"
-                            shape="poly">
-                        <area target="" alt="대퇴사두근" title="대퇴사두근" href="/main3/main3-imgChoice/대퇴사두근/대퇴사두근.html"
-                            coords="100,239,104,255,109,276,114,289,113,306,110,322,107,329,104,329,99,314,94,305,93,295,92,284,95,259"
-                            shape="poly">
-                        <area target="" alt="대퇴사두근" title="대퇴사두근" href="/main3/main3-imgChoice/대퇴사두근/대퇴사두근.html"
-                            coords="173,238,169,256,164,274,158,290,160,305,161,316,166,330,168,330,178,305,180,293,179,268,177,253"
-                            shape="poly">
-                        <area target="" alt="외측광근" title="외측광근" href=""
-                            coords="180,263,182,276,182,296,179,307,176,317,172,327,172,339,176,336,172,339,177,329,183,313,183,301,185,288,185,272"
-                            shape="poly">
-                        <area target="" alt="외측광근" title="외측광근" href=""
-                            coords="92,261,87,272,87,281,88,291,90,316,99,339,100,332,99,323,93,311,91,295,90,279"
-                            shape="poly">
-                        <area target="" alt="내측광근" title="내측광근" href=""
-                            coords="116,294,115,307,115,314,111,327,111,335,113,344,116,343,123,338,124,329"
-                            shape="poly">
-                        <area target="" alt="내측광근" title="내측광근" href=""
-                            coords="156,293,149,330,150,338,157,342,160,343,162,336,161,326,158,311" shape="poly">
-                        <area target="" alt="내비복근" title="내비복근" href="/main3/main3-imgChoice/종아리/종아리.html"
-                            coords="155,373,154,383,152,393,151,406,154,416,157,429,158,441,160,434,160,410,161,402,162,388"
-                            shape="poly">
-                        <area target="" alt="내비복근" title="내비복근" href="/main3/main3-imgChoice/종아리/종아리.html"
-                            coords="117,372,111,388,111,403,113,423,114,441,115,427,118,416,122,405,121,388"
-                            shape="poly">
-                        <area target="" alt="내비복근" title="내비복근" href="/main3/main3-imgChoice/종아리/종아리.html"
-                            coords="337,360,345,372,345,381,349,410,344,424,338,420,334,412,337,402,336,388"
-                            shape="poly">
-                        <area target="" alt="내비복근" title="내비복근" href="/main3/main3-imgChoice/종아리/종아리.html"
-                            coords="392,362,383,373,382,388,380,409,384,424,389,422,393,413,393,402,393,388,392,374"
-                            shape="poly">
-                        <area target="" alt="외비복근" title="외비복근" href="/main3/main3-imgChoice/종아리/종아리.html"
-                            coords="329,356,322,365,322,373,322,365,319,383,319,398,324,420,332,411,334,403,333,390,334,379,334,364"
-                            shape="poly">
-                        <area target="" alt="외비복근" title="외비복근" href="/main3/main3-imgChoice/종아리/종아리.html"
-                            coords="400,356,396,362,395,372,396,385,396,394,396,405,398,412,403,419,405,418,410,399,409,380,406,370,406,364"
-                            shape="poly">
-                    </map>
-                    <div class="info" id="info-box"></div>
-                </div>
-            </div>
+        <div class="choice-container3">
+          <button
+            class="choice3 chest3"
+            onclick="next('/main3/main3-chest/main3-chest')"
+          >
+            가슴
+          </button>
+          <button
+            class="choice3 back3"
+            onclick="next('/main3/main3-back/main3-back')"
+          >
+            등
+          </button>
+          <button
+            class="choice3 shoulder3"
+            onclick="next('/main3/main3-shoulder/main3-shoulder')"
+          >
+            어깨
+          </button>
+          <button
+            class="choice3 arm3"
+            onclick="next('/main3/main3-arm/main3-arm')"
+          >
+            팔
+          </button>
+          <button
+            class="choice3 lower-body3"
+            onclick="next('/main3/main3-lowerbody/main3-lowerbody')"
+          >
+            하체
+          </button>
         </div>
+        <div class="body-container">
+          <div class="body">
+            <div class="image-map-container">
+              <img src="인체.png" usemap="#image-map" id="main-image" />
+              <svg class="svg-overlay"></svg>
+            </div>
+            <map name="image-map">
+              <area
+                target=""
+                alt="대흉근"
+                title="대흉근"
+                href="/main3/main3-imgChoice/대흉근/대흉근.html"
+                coords="144,100,153,98,164,99,172,102,177,104,180,109,180,117,173,134,168,139,161,143,148,142,141,139,140,131,139,117,141,108"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="대흉근"
+                title="대흉근"
+                href="/main3/main3-imgChoice/대흉근/대흉근.html"
+                coords="127,99,114,99,103,101,97,104,95,108,93,116,95,122,99,132,104,138,110,141,113,142,122,142,126,142,131,140,133,133,134,122,133,109,130,102"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="복근"
+                title="복근"
+                href=""
+                coords="118,147,125,145,132,144,142,144,149,146,155,147,156,151,157,157,157,166,157,174,156,180,157,187,157,191,155,196,153,198,140,198,132,198,124,198,117,196,115,191,116,184,116,177,116,172,116,165,115,161,116,152"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="대둔근"
+                title="대둔근"
+                href="/main3/main3-imgChoice/대둔근/대둔근.html"
+                coords="347,219,344,221,347,219,335,226,327,231,324,237,324,245,324,255,326,261,330,267,337,273,345,274,352,273,359,269,362,264,362,250,361,239,360,231,355,224"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="대둔근"
+                title="대둔근"
+                href="/main3/main3-imgChoice/대둔근/대둔근.html"
+                coords="381,219,373,224,368,233,367,241,367,249,367,260,368,268,373,271,378,273,385,274,390,274,396,270,401,265,403,261,405,252,405,243,404,236,399,230,391,225,385,222"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="삼각근"
+                title="삼각근"
+                href="/main3/main3-imgChoice/삼각근/삼각근.html"
+                coords="98,90,88,93,83,96,78,101,75,107,75,115,77,122,80,127,86,121,90,116,91,107,95,102,101,99,110,97,104,94"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="삼각근"
+                title="삼각근"
+                href="/main3/main3-imgChoice/삼각근/삼각근.html"
+                coords="162,97,167,95,173,92,174,91,181,92,188,95,191,98,196,103,198,106,198,113,197,118,193,128,186,121,183,116,182,111,181,106,177,102,172,99"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="삼각근"
+                title="삼각근"
+                href="/main3/main3-imgChoice/삼각근/삼각근.html"
+                coords="313,93,319,95,326,98,320,101,316,105,313,110,312,116,308,120,304,125,297,132,296,122,296,114,299,105,303,98,307,95,309,94"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="삼각근"
+                title="삼각근"
+                href="/main3/main3-imgChoice/삼각근/삼각근.html"
+                coords="415,92,408,96,404,98,409,101,414,106,416,110,418,116,421,121,425,125,431,132,432,124,433,117,432,110,428,102,423,96,420,94"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="승모근"
+                title="승모근"
+                href="/main3/main3-imgChoice/승모근/승모근.html"
+                coords="151,77,144,96,156,96,171,90,159,85"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="승모근"
+                title="승모근"
+                href="/main3/main3-imgChoice/승모근/승모근.html"
+                coords="121,76,130,96,118,96,103,90,114,85"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="복사근"
+                title="복사근"
+                href=""
+                coords="173,187,174,196,174,206,176,214,169,219,162,226,161,215,160,206,165,198"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="복사근"
+                title="복사근"
+                href=""
+                coords="98,187,103,193,109,198,113,209,111,217,111,228,103,217,96,214,98,206"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="광배근"
+                title="광배근"
+                href="/main3/main3-imgChoice/광배근/광배근.html"
+                coords="343,131,346,138,350,144,356,157,354,165,350,173,345,182,343,191,343,200,339,204,335,198,331,192,330,182,326,174,324,163,319,145,318,135,331,136"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="광배근"
+                title="광배근"
+                href="/main3/main3-imgChoice/광배근/광배근.html"
+                coords="386,131,382,138,378,145,375,151,373,158,373,164,377,170,381,178,385,190,385,202,390,203,397,190,400,177,402,172,407,155,410,144,410,135,397,136"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="복사근"
+                title="복사근"
+                href=""
+                coords="328,185,330,194,336,205,334,209,324,214,324,200"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="복사근"
+                title="복사근"
+                href=""
+                coords="401,185,397,193,392,207,395,210,405,213,404,199"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="둔근"
+                title="둔근"
+                href="/main3/main3-imgChoice/둔근/둔근.html"
+                coords="384,217,399,216,401,221,403,230,388,221"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="둔근"
+                title="둔근"
+                href="/main3/main3-imgChoice/둔근/둔근.html"
+                coords="330,216,325,230,333,224,341,220,345,217,337,216"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="삼두근"
+                title="삼두근"
+                href="/main3/main3-imgChoice/삼두근/삼두근.html"
+                coords="416,121,413,129,412,144,415,161,421,175,426,177,433,167,433,152,431,136,424,128"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="삼두근"
+                title="삼두근"
+                href="/main3/main3-imgChoice/삼두근/삼두근.html"
+                coords="312,121,299,135,297,145,295,163,296,169,304,178,308,174,314,160,317,145,315,128"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="이두근"
+                title="이두근"
+                href="/main3/main3-imgChoice/이두근/이두근.html"
+                coords="90,120,81,130,70,140,68,151,67,164,69,176,74,175,81,165,90,147,91,134"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="이두근"
+                title="이두근"
+                href="/main3/main3-imgChoice/이두근/이두근.html"
+                coords="182,120,181,132,183,148,188,158,200,177,204,174,206,164,205,152,202,139"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="진거근"
+                title="진거근"
+                href=""
+                coords="161,145,174,138,173,147,171,154,172,165,173,170,172,185,164,196,161,193,161,179,162,163"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="진거근"
+                title="진거근"
+                href=""
+                coords="98,139,110,145,111,152,112,159,111,169,112,183,109,195,99,186,100,174,100,163,103,156,100,149"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="햄스트링"
+                title="햄스트링"
+                href="/main3/main3-imgChoice/햄스트링/햄스트링.html"
+                coords="343,278,336,277,331,280,328,285,327,290,326,300,326,313,326,323,326,331,325,338,323,344,322,361,330,348,334,338,336,337,336,344,338,352,343,363,341,346,344,333,348,319,350,308,350,296,347,286"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="햄스트링"
+                title="햄스트링"
+                href="/main3/main3-imgChoice/햄스트링/햄스트링.html"
+                coords="386,278,392,277,397,279,401,284,402,290,403,298,403,308,403,316,403,331,406,348,407,362,394,337,393,336,393,344,392,351,386,365,388,349,386,338,381,317,379,305,379,294"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="박근"
+                title="박근"
+                href="/main3/main3-imgChoice/박근/박근.html"
+                coords="345,276,352,276,359,273,361,279,359,289,357,308,354,315,351,293"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="박근"
+                title="박근"
+                href="/main3/main3-imgChoice/박근/박근.html"
+                coords="368,274,376,276,382,277,382,283,377,292,374,316,371,302,368,284,368,279"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="박근"
+                title="박근"
+                href="/main3/main3-imgChoice/박근/박근.html"
+                coords="126,261,132,266,134,284,131,292,128,312,127,298,129,285,128,271"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="박근"
+                title="박근"
+                href="/main3/main3-imgChoice/박근/박근.html"
+                coords="145,263,140,268,139,286,141,293,145,312,146,300,143,288"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="장요근, 치골근, 장내전근"
+                title="장요근, 치골근, 장내전근"
+                href=""
+                coords="167,228,152,245,153,253,158,261,162,251,166,236"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="장요근, 치골근, 장내전근"
+                title="장요근, 치골근, 장내전근"
+                href=""
+                coords="104,226,115,262,119,253,120,245"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="봉공근"
+                title="봉공근"
+                href=""
+                coords="99,222,102,226,120,281,124,302,126,317,125,327,119,297,110,269"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="봉공근"
+                title="봉공근"
+                href=""
+                coords="173,223,169,227,170,227,154,279,148,301,147,328,152,301,159,281,166,257"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="대퇴사두근"
+                title="대퇴사두근"
+                href="/main3/main3-imgChoice/대퇴사두근/대퇴사두근.html"
+                coords="100,239,104,255,109,276,114,289,113,306,110,322,107,329,104,329,99,314,94,305,93,295,92,284,95,259"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="대퇴사두근"
+                title="대퇴사두근"
+                href="/main3/main3-imgChoice/대퇴사두근/대퇴사두근.html"
+                coords="173,238,169,256,164,274,158,290,160,305,161,316,166,330,168,330,178,305,180,293,179,268,177,253"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="외측광근"
+                title="외측광근"
+                href=""
+                coords="180,263,182,276,182,296,179,307,176,317,172,327,172,339,176,336,172,339,177,329,183,313,183,301,185,288,185,272"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="외측광근"
+                title="외측광근"
+                href=""
+                coords="92,261,87,272,87,281,88,291,90,316,99,339,100,332,99,323,93,311,91,295,90,279"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="내측광근"
+                title="내측광근"
+                href=""
+                coords="116,294,115,307,115,314,111,327,111,335,113,344,116,343,123,338,124,329"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="내측광근"
+                title="내측광근"
+                href=""
+                coords="156,293,149,330,150,338,157,342,160,343,162,336,161,326,158,311"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="내비복근"
+                title="내비복근"
+                href="/main3/main3-imgChoice/종아리/종아리.html"
+                coords="155,373,154,383,152,393,151,406,154,416,157,429,158,441,160,434,160,410,161,402,162,388"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="내비복근"
+                title="내비복근"
+                href="/main3/main3-imgChoice/종아리/종아리.html"
+                coords="117,372,111,388,111,403,113,423,114,441,115,427,118,416,122,405,121,388"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="내비복근"
+                title="내비복근"
+                href="/main3/main3-imgChoice/종아리/종아리.html"
+                coords="337,360,345,372,345,381,349,410,344,424,338,420,334,412,337,402,336,388"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="내비복근"
+                title="내비복근"
+                href="/main3/main3-imgChoice/종아리/종아리.html"
+                coords="392,362,383,373,382,388,380,409,384,424,389,422,393,413,393,402,393,388,392,374"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="외비복근"
+                title="외비복근"
+                href="/main3/main3-imgChoice/종아리/종아리.html"
+                coords="329,356,322,365,322,373,322,365,319,383,319,398,324,420,332,411,334,403,333,390,334,379,334,364"
+                shape="poly"
+              />
+              <area
+                target=""
+                alt="외비복근"
+                title="외비복근"
+                href="/main3/main3-imgChoice/종아리/종아리.html"
+                coords="400,356,396,362,395,372,396,385,396,394,396,405,398,412,403,419,405,418,410,399,409,380,406,370,406,364"
+                shape="poly"
+              />
+            </map>
+            <div class="info" id="info-box"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="main2.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
     <script type="text/javascript">
-        // rwdImageMaps로 동적 할당하도록 설정
-        $(document).ready(function () {
-            $('img[usemap]').rwdImageMaps();
-        });
+      // rwdImageMaps로 동적 할당하도록 설정
+      $(document).ready(function () {
+        $("img[usemap]").rwdImageMaps();
+      });
     </script>
-</body>
-
+  </body>
 </html>
